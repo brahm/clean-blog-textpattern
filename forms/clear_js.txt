@@ -1,0 +1,6 @@
+<!-- jQuery -->
+<script src="<txp:site_url />assets/js/jquery-1.12.3.min.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="<txp:site_url />assets/js/bootstrap.min.js"></script>
+<!-- Custom Theme JavaScript -->
+<script src="<txp:site_url />assets/clean-blog.min.js"></script>

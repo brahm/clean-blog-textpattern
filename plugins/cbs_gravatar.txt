@@ -1,0 +1,45 @@
+# cbs_gravatar v0.3
+# Simple gravatar display
+# Christophe Beyls
+# http://www.digitalia.be/
+
+# ......................................................................
+# This is a plugin for Textpattern - http://textpattern.com/
+# To install: textpattern > admin > plugins
+# Paste the following text into the 'Install plugin' box:
+# ......................................................................
+
+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

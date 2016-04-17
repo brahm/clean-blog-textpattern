@@ -1,0 +1,50 @@
+
+<!-- count how many results return -->
+  <txp:article limit="10" pgonly="1" />
+
+  <txp:if_search_results>
+
+<!-- if search result count greater than 200 then display excessive results message, otherwise show search result count -->
+    <txp:if_search_results max="200">
+      <h1><txp:search_result_count /> <txp:text item="matching_search_request" /> &#8216;<txp:search_term />&#8217;&#8230;</h1>
+    <txp:else />
+      <h1><txp:text item="too_common_search_term" /> &#8216;<txp:search_term />&#8217;</h1>
+    </txp:if_search_results>
+
+<!-- if no search results, then display no search results message -->
+  <txp:else />
+    <h1><txp:text item="no_search_matches" /></h1>
+
+  </txp:if_search_results>
+<hr>
+<!-- display resulting articles (10 per page) -->
+  <txp:article limit="10">
+
+  <div class="post-preview" role="article" itemscope itemtype="http://schema.org/Article">
+      <a href="<txp:permlink />" itemprop="url">
+          <h2 itemprop="name" class="post-title"><txp:title /></h2>
+          <txp:if_excerpt><h3 class="post-subtitle" itemprop="description"><txp:excerpt /></h3></txp:if_excerpt>
+      </a>
+      <p class="post-meta">Posted by <txp:author /> on <time datetime="<txp:posted />"><txp:posted /></time></p>
+  </div>
+
+  </txp:article>
+
+<!-- check if there are further results and provide pagination links or disabled buttons depending on the result,
+  this method is more flexibile than using simple txp:older/txp:newer tags -->
+  <txp:if_search_results min="11">
+
+  <ul class="pager">
+    <txp:variable name="prev" value='<txp:newer />' />
+    <txp:variable name="next" value='<txp:older />' />
+    <txp:if_variable name="prev" value="">
+    <txp:else />
+    <li class="next"><a href="<txp:newer />">Newer Posts &rarr;</a></li>
+    </txp:if_variable>
+    <txp:if_variable name="next" value="">
+    <txp:else />
+    <li class="previous"><a href="<txp:older />">&Larr; Older Posts</a></li>
+    </txp:if_variable>
+  </ul>
+
+  </txp:if_search_results>

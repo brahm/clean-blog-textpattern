@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="<txp:lang />">
+<txp:output_form form="clear_head" />
+
+
+  <body id="<txp:if_section name=""><txp:if_search>search<txp:else />home</txp:if_search><txp:else /><txp:section /></txp:if_section>-page">
+
+<txp:output_form form="clear_nav" />
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <txp:if_section>
+    <header class="intro-header" style="background-image: url('<txp:site_url />assets/img/<txp:section />-bg.jpg')">
+    </txp:if_section>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="page-heading">
+              <h1><txp:section title="1" /></h1>
+              <hr class="small">
+              <span class="subheading">Have questions? I have answers (maybe).</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+          <txp:if_article_list>
+
+          <txp:article form="single" limit="1" />
+
+          </txp:if_article_list>
+
+          <txp:zem_contact to="wagner@brahm.com.br" label="" class="" show_error="0">
+            <div class="row control-group">
+              <div class="form-group col-xs-12 floating-label-form-group controls">
+                <txp:zem_contact_text label="Name" max="" break="" class="form-control" placeholder="Name" type="text" id="name" />
+              </div>
+            </div>
+            <div class="row control-group">
+              <div class="form-group col-xs-12 floating-label-form-group controls">
+                <txp:zem_contact_email label="Email Address" break="" max="" class="form-control" placeholder="Email Address" type="email" id="email" />
+              </div>
+            </div>
+            <div class="row control-group">
+              <div class="form-group col-xs-12 floating-label-form-group controls">
+                <txp:zem_contact_textarea label="Message" break="" rows="5" cols="" class="form-control" placeholder="Message" id="message" />
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="form-group col-xs-12">
+                <txp:zem_contact_submit label="Send" class="btn btn-default" />
+              </div>
+            </div>
+          </txp:zem_contact>
+
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+<txp:output_form form="clear_footer" />
+
+<txp:output_form form="clear_js" />
+
+          </body>
+        </html>

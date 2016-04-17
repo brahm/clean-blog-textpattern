@@ -1,0 +1,19 @@
+<article id="div-comment-1" class="comment-body">
+  <footer class="comment-meta">
+    <div class="comment-author vcard">
+      <txp:cbs_gravatar size="32" class="avatar avatar-32 photo avatar-default" />
+      <b class="fn"><txp:comment_name /></b>
+      <span class="says">says:</span>
+    </div><!-- .comment-author -->
+    <div class="comment-metadata">
+      <txp:comment_permlink>
+        <time datetime="2016-04-14T23:18:22+00:00">April 14, 2016 at 11:18 pm</time>
+      </txp:comment_permlink>
+    </div><!-- .comment-metadata -->
+  </footer><!-- .comment-meta -->
+
+  <div class="comment-content">
+    <txp:comment_message />
+  </div><!-- .comment-content -->
+
+</article><!-- .comment-body -->
