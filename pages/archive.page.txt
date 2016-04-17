@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="<txp:lang />">
-<txp:output_form form="clear_head" />
+<txp:output_form form="clean_head" />
 
 
   <body id="<txp:if_section name=""><txp:if_search>search<txp:else />home</txp:if_search><txp:else /><txp:section /></txp:if_section>-page">
 
-<txp:output_form form="clear_nav" />
+<txp:output_form form="clean_nav" />
 
     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
@@ -42,7 +42,7 @@
           </form>
           <br>
 
-          <txp:article_custom limit="99999" form="clear_archive_list" section="articles" />
+          <txp:article_custom limit="99999" form="clean_archive_list" section="articles" />
 
 
 
@@ -54,9 +54,9 @@
 
     <hr>
 
-        <txp:output_form form="clear_footer" />
+        <txp:output_form form="clean_footer" />
 
-        <txp:output_form form="clear_js" />
+        <txp:output_form form="clean_js" />
 
           </body>
         </html>

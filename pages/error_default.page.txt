@@ -24,7 +24,7 @@
   <![endif]-->
 </head>
   <body id="error-page">
-    <txp:output_form form="clear_nav" />
+    <txp:output_form form="clean_nav" />
     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
     <header class="intro-header" style="background-image: url('<txp:site_url />assets/img/error-bg.jpg')">
@@ -73,7 +73,7 @@
       </div>
     </div>
     <hr>
-    <txp:output_form form="clear_footer" />
-    <txp:output_form form="clear_js" />
+    <txp:output_form form="clean_footer" />
+    <txp:output_form form="clean_js" />
   </body>
 </html>
