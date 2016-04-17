@@ -66,6 +66,10 @@ Upload the assets folder to your site/blog root.
 
 Install and activate with level 5 both cvs_gravatar and zen_contact_reborn plugins.
 
+##### Custom Field
+
+Go to Admin/Preferences/Advanced/Custom fields and create a custom field called **Article BG** to insert the image used as header backgound on your posts.
+
 ##### Pages
 
 Edit and replace the contents of standard pages **archive**, **default** and **error_default** for the content of file with the same name and type. Create de page **single** and put the content of the file with the same name.
@@ -111,22 +115,28 @@ Configure the Sections this way:
 | about    | About    | single  | default |
 
 
-About The "clear_single_subtitle" Form
-----------------------------------------------
-
-To any page/section you create using the theme **single page**, if you want a subtitle on it you'll need to copy the single page with a different name, create a clear_single_subtitle changing the **subtitle** part for the name of this new section and made the correction on the copied page. I know, its ugly.
-
 Header Images On Single Pages
 ----------------------------------------------
 
-Each page has a beautiful backgound header, to be simple to change for your own images, the theme will look for a file with a pattern **section_name-bg.png**.
+Each page has a beautiful background header, to be simple to change for your own images, the theme will look for a file with a pattern **section_name-bg.png**.
 
+
+How to Make a New Single Page
+----------------------------------------------
+
+1. Create a new **section** and use the **single** page as template.
+2. Create a new post.
+3. Fill in the **title**, it will be displayed on the article body of this page, and **summary** field will be displayed in the page header.
+4. Upload an image file to the **assets/img** folder using this **section_name-bg.png** pattern name, it will be the header background of this page.
+3. Publish!
+
+Select the section you want.
 
 How to Make a New Post
 ----------------------------------------------
 
 1. Fill in the **title** and **summary** fields. Its contents will be displayed in the page header.
-2. Fill in the **Article Image** field with image you want to be displayed as header background.
+2. Fill in the custom **Article BG** field with image you want to be displayed as header background.
 3. Publish!
 
 
