@@ -3,6 +3,8 @@ Clean Blog for Textpattern
 
 Clean blog is a carefully styled Bootstrap blog theme that is perfect for personal or company blogs. This theme features five HTML pages including a blog index, an single article page, an archive/search page, a contact page and an error page.
 
+###[View Live Demo &rarr;](http://lab.brahm.com.br/cleanblogtxp/)
+
 ##### Features:
 
 * Fully responsive
@@ -72,7 +74,7 @@ Go to Admin/Preferences/Advanced/Custom fields and create a custom field called 
 
 ##### Pages
 
-Edit and replace the contents of standard pages **archive**, **default** and **error_default** for the content of file with the same name and type. Create de page **single** and put the content of the file with the same name.
+Edit and replace the contents of standard pages **archive**, **default** and **error_default** for the content of file with the same name and type. Create **contact** and **single** pages and paste the content of respective files.
 
 | Page          | File                   |
 |---------------|------------------------|
@@ -84,40 +86,43 @@ Edit and replace the contents of standard pages **archive**, **default** and **e
 
 ##### Forms
 
-Edit and replace the contents of standard forms for the content of file with the same name and type. If some file has no form prebuild in your Textpattern installation, create and do the same as before.
+Edit and replace the contents of **comments_display**, **default**, **search_results**, **comments_form** and **comments** standard forms for the content of respective files. Create **clear_archive_list**, **clear_article_list**, **clear_single**, **clear_footer**, **clear_head**, **clear_js** and **clear_nav** using the types and contents of the files listed in the table below.
 
 | Form Name             | Type    | File                                |
 |-----------------------|---------|-------------------------------------|
-| archive_list          | article | archive_list.form.article.txt       |
-| article_list          | article | article_list.form.article.txt       |
+| clear_archive_list    | article | archive_list.form.article.txt       |
+| clear_article_list    | article | article_list.form.article.txt       |
 | comments_display      | article | comments_display.form.article.txt   |
-| comments_form         | comment | comments_form.form.comment.txt      |
-| comments              | comment | comments.form.comment.txt           |
 | default               | article | default.form.comment.txt            |
 | search_results        | article | search_results.form.comment.txt     |
-| single                | article | single.form.comment.txt             |
+| clear_single          | article | single.form.comment.txt             |
 | clear_footer          | misc    | clear_footer.form.misc.txt          |
 | clear_head            | misc    | clear_head.form.misc.txt            |
 | clear_js              | misc    | clear_js.form.misc.txt              |
 | clear_nav             | misc    | clear_nav.form.misc.txt             |
-| clear_single_subtitle | misc    | clear_single_subtitle.form.misc.txt |
+| comments_form         | comment | comments_form.form.comment.txt      |
+| comments              | comment | comments.form.comment.txt           |
+
 
 ##### Sections
 
 Configure the Sections this way:
 
-| Name     | Title    | Page    | Style   |
-|----------|----------|---------|---------|
-| default  | default  | default | default |
-| contact  | Contact  | contact | default |
-| articles | Articles | default | default |
-| archive  | Archive  | archive | default |
-| about    | About    | single  | default |
+| Name     | Title    | Page    | Style   | Appears | Syndicate | Search |
+|----------|----------|---------|---------|---------|-----------|--------|
+| default  | default  | default | default | yes     | yes       | yes    |
+| contact  | Contact  | contact | default | no      | no        | yes    |
+| articles | Articles | default | default | yes     | yes       | yes    |
+| archive  | Archive  | archive | default | no      | no        | no     |
+| about    | About    | single  | default | no      | no        | yes    |
+
+Navigation Menu
+----------------------------------------------
+The navigation menu has the section list hard coded, so when you create new pages or sections don't forget to update the form **clear_nav**.
 
 
 Header Images On Single Pages
 ----------------------------------------------
-
 Each page has a beautiful background header, to be simple to change for your own images, the theme will look for a file with a pattern **section_name-bg.png**.
 
 
@@ -125,20 +130,23 @@ How to Make a New Single Page
 ----------------------------------------------
 
 1. Create a new **section** and use the **single** page as template.
-2. Create a new post.
+2. Create a new **post** and use the **section** you just create.
 3. Fill in the **title**, it will be displayed on the article body of this page, and **summary** field will be displayed in the page header.
-4. Upload an image file to the **assets/img** folder using this **section_name-bg.png** pattern name, it will be the header background of this page.
-3. Publish!
+4. In **Excerpt markup** select **Leave text untouched**.
+5. Upload an image file to the **assets/img** folder using this **section_name-bg.png** pattern name, it will be the header background of this page.
+6. Publish!
 
 Select the section you want.
 
 How to Make a New Post
 ----------------------------------------------
 
-1. Fill in the **title** and **summary** fields. Its contents will be displayed in the page header.
-2. Fill in the custom **Article BG** field with image you want to be displayed as header background.
-3. Publish!
-
+1. Create a new **post** and use the section **article**.
+2. Select the categories.
+3. Fill in the **title** and **summary** fields. Its contents will be displayed in the page header.
+4. In **Excerpt markup** select **Leave text untouched**.
+5. Fill in the custom **Article BG** field with image you want to be displayed as header background.
+6. Publish!
 
 Known Issues
 ----------------------------------------------
@@ -158,3 +166,7 @@ This theme wouldn't have been possible without the following open source resourc
 * Gravatar plugin made by Christophe Beyls (http://textpattern.org/plugins/628/cbs_gravatar)
 * Zem Contact Reborn plugin currently maintained by Bloke (Stef Dawson) (https://github.com/Bloke/zem_contact_reborn)
 * Font Awesome iconic font set (https://fortawesome.github.io/Font-Awesome/)
+
+License
+----------------------------------------------
+Licensed under GNU General Public License Version 3 (https://github.com/brahm/clean-blog-textpattern/blob/master/LICENSE)

@@ -2,6 +2,7 @@
 <html lang="<txp:lang />">
 <txp:output_form form="clear_head" />
 
+
   <body id="<txp:if_section name=""><txp:if_search>search<txp:else />home</txp:if_search><txp:else /><txp:section /></txp:if_section>-page">
 
 <txp:output_form form="clear_nav" />
@@ -16,7 +17,8 @@
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="page-heading">
               <h1><txp:section title="1" /></h1>
-              <h2 class="subheading"><txp:excerpt /></h2>
+              <hr class="small">
+              <h2 class="subheading">A look at the past of this blog.</h2>
             </div>
           </div>
         </div>
@@ -28,11 +30,23 @@
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
-          <txp:if_article_list>
 
-          <txp:article form="single" limit="1" />
 
-          </txp:if_article_list>
+          <form role="search" method="get" action="<txp:site_url />">
+          <div class="row control-group">
+              <div class="form-group col-xs-12 floating-label-form-group controls inner-addon left-addon">
+                <i class="glyphicon glyphicon-search"></i>
+                <input type="search" class="form-control" name="q" />
+              </div>
+          </div>
+          </form>
+          <br>
+
+          <txp:article_custom limit="99999" form="clear_archive_list" section="articles" />
+
+
+
+
 
         </div>
       </div>
@@ -40,9 +54,9 @@
 
     <hr>
 
-    <txp:output_form form="clear_footer" />
+        <txp:output_form form="clear_footer" />
 
-    <txp:output_form form="clear_js" />
+        <txp:output_form form="clear_js" />
 
-  </body>
-</html>
+          </body>
+        </html>

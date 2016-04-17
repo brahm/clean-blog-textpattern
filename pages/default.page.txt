@@ -80,7 +80,7 @@
           </form>
           <br>
 
-            <txp:output_form form="search_results"/>
+            <txp:output_form form="clear_search_results"/>
 
           <txp:else />
 
@@ -103,7 +103,7 @@
 
           <txp:else />
 
-          <txp:article form="article_list" limit="5" />
+          <txp:article form="clear_article_list" limit="5" />
           <ul class="pager">
             <txp:variable name="prev" value='<txp:newer />' />
             <txp:variable name="next" value='<txp:older />' />
