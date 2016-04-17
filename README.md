@@ -3,6 +3,8 @@ Clean Blog for Textpattern
 
 Clean blog is a carefully styled Bootstrap blog theme that is perfect for personal or company blogs. This theme features five HTML pages including a blog index, an single article page, an archive/search page, a contact page and an error page.
 
+![Clean Blog](https://raw.githubusercontent.com/brahm/clean-blog-textpattern/master/assets/img/clean-blog.jpg)
+
 ###[View Live Demo &rarr;](http://lab.brahm.com.br/cleanblogtxp/)
 
 ##### Features:
@@ -45,11 +47,11 @@ Files
 
 ##### Custom forms:
 
-* **clear_footer.form.misc.txt** - page footer code block
-* **clear_head.form.misc.txt** - page head (includes) code block
-* **clear_js.form.misc.txt** - javascripts code block
-* **clear_nav.form.misc.txt** - main mavigation menu code block
-* **clear_single_subtitle.form.misc.txt** - "kludge" solution to give a subtitle to non article pages code block
+* **clean_footer.form.misc.txt** - page footer code block
+* **clean_head.form.misc.txt** - page head (includes) code block
+* **clean_js.form.misc.txt** - javascripts code block
+* **clean_nav.form.misc.txt** - main mavigation menu code block
+* **clean_single_subtitle.form.misc.txt** - "kludge" solution to give a subtitle to non article pages code block
 
 ##### Plugins:
 
@@ -86,20 +88,20 @@ Edit and replace the contents of standard pages **archive**, **default** and **e
 
 ##### Forms
 
-Edit and replace the contents of **comments_display**, **default**, **search_results**, **comments_form** and **comments** standard forms for the content of respective files. Create **clear_archive_list**, **clear_article_list**, **clear_single**, **clear_footer**, **clear_head**, **clear_js** and **clear_nav** using the types and contents of the files listed in the table below.
+Edit and replace the contents of **comments_display**, **default**, **search_results**, **comments_form** and **comments** standard forms for the content of respective files. Create **clean_archive_list**, **clean_article_list**, **clean_single**, **clean_footer**, **clean_head**, **clean_js** and **clean_nav** using the types and contents of the files listed in the table below.
 
 | Form Name             | Type    | File                                |
 |-----------------------|---------|-------------------------------------|
-| clear_archive_list    | article | archive_list.form.article.txt       |
-| clear_article_list    | article | article_list.form.article.txt       |
+| clean_archive_list    | article | archive_list.form.article.txt       |
+| clean_article_list    | article | article_list.form.article.txt       |
 | comments_display      | article | comments_display.form.article.txt   |
 | default               | article | default.form.comment.txt            |
 | search_results        | article | search_results.form.comment.txt     |
-| clear_single          | article | single.form.comment.txt             |
-| clear_footer          | misc    | clear_footer.form.misc.txt          |
-| clear_head            | misc    | clear_head.form.misc.txt            |
-| clear_js              | misc    | clear_js.form.misc.txt              |
-| clear_nav             | misc    | clear_nav.form.misc.txt             |
+| clean_single          | article | single.form.comment.txt             |
+| clean_footer          | misc    | clean_footer.form.misc.txt          |
+| clean_head            | misc    | clean_head.form.misc.txt            |
+| clean_js              | misc    | clean_js.form.misc.txt              |
+| clean_nav             | misc    | clear_nav.form.misc.txt             |
 | comments_form         | comment | comments_form.form.comment.txt      |
 | comments              | comment | comments.form.comment.txt           |
 
