@@ -7,7 +7,7 @@
     </div><!-- .comment-author -->
     <div class="comment-metadata">
       <txp:comment_permlink>
-        <time datetime="2016-04-14T23:18:22+00:00">April 14, 2016 at 11:18 pm</time>
+        <time datetime="<txp:comment_time format="%FT%H:%M:%S+00:00" />"><txp:comment_time format="%B %e, %Y" /> at <txp:comment_time format="%H:%M %p" /></time>
       </txp:comment_permlink>
     </div><!-- .comment-metadata -->
   </footer><!-- .comment-meta -->

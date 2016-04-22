@@ -8,7 +8,7 @@
     <txp:comments_error wraptag="ol" break="li" class="error_message" />
   </txp:if_comments_error>
 
-  <form action="http://job.brahm.com.br/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate>
+  <form action="<txp:permlink />#cpreview" method="post" id="commentform" class="comment-form" novalidate>
     <p class="comment-notes"><txp:text item="enter_comment_here" /></p>
     <p class="comment-form-comment">
       <label for="comment"><txp:text item="comment_message" /><span class="required">*</span></label>

@@ -8,7 +8,9 @@
   <txp:else />
   <title><txp:page_title /></title>
   <txp:if_individual_article>
+  <txp:if_custom_field name="Post_Description">
   <meta name="description" content="<txp:custom_field name="Post_Description" />" />
+  </txp:if_custom_field>
   </txp:if_individual_article>
   <txp:meta_keywords />
   </txp:if_section>
@@ -23,7 +25,6 @@
   </txp:if_category>
   </txp:if_search>
   <txp:feed_link flavor="rss" format="link" label="RSS" />
-  <txp:rsd />
   <txp:if_section name="">
   <link rel="canonical" href="<txp:site_url />">
   <txp:else />

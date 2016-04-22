@@ -49,6 +49,7 @@ Files
 
 * **clean_footer.form.misc.txt** - page footer code block
 * **clean_head.form.misc.txt** - page head (includes) code block
+* **clean_excerpt.form.article.txt** - a way to include excerpts ina non article area
 * **clean_js.form.misc.txt** - javascripts code block
 * **clean_nav.form.misc.txt** - main mavigation menu code block
 * **clean_single_subtitle.form.misc.txt** - "kludge" solution to give a subtitle to non article pages code block
@@ -88,7 +89,7 @@ Edit and replace the contents of standard pages **archive**, **default** and **e
 
 ##### Forms
 
-Edit and replace the contents of **comments_display**, **default**, **search_results**, **comments_form** and **comments** standard forms for the content of respective files. Create **clean_archive_list**, **clean_article_list**, **clean_single**, **clean_footer**, **clean_head**, **clean_js** and **clean_nav** using the types and contents of the files listed in the table below.
+Edit and replace the contents of **comments_display**, **default**, **search_results**, **comments_form** and **comments** standard forms for the content of respective files. Create **clean_archive_list**, **clean_article_list**, **clean_excerpt**, **clean_single**, **clean_footer**, **clean_head**, **clean_js** and **clean_nav** using the types and contents of the files listed in the table below.
 
 | Form Name             | Type    | File                                |
 |-----------------------|---------|-------------------------------------|
@@ -97,6 +98,7 @@ Edit and replace the contents of **comments_display**, **default**, **search_res
 | comments_display      | article | comments_display.form.article.txt   |
 | default               | article | default.form.comment.txt            |
 | search_results        | article | search_results.form.comment.txt     |
+| clean_excerpt         | article | clean_excerpt.form.article.txt      |
 | clean_single          | article | single.form.comment.txt             |
 | clean_footer          | misc    | clean_footer.form.misc.txt          |
 | clean_head            | misc    | clean_head.form.misc.txt            |
@@ -155,7 +157,6 @@ Known Issues
 
 * The **Zem Contact Reborn** plugin is still in development, it may be that error messages do not appear correctly on the form, so either you wait out the final version, or edit the PHP code and replace all texts.
 
-
 Development Information
 ----------------------------------------------
 
@@ -168,6 +169,8 @@ This theme wouldn't have been possible without the following open source resourc
 * Gravatar plugin made by Christophe Beyls (http://textpattern.org/plugins/628/cbs_gravatar)
 * Zem Contact Reborn plugin currently maintained by Bloke (Stef Dawson) (https://github.com/Bloke/zem_contact_reborn)
 * Font Awesome iconic font set (https://fortawesome.github.io/Font-Awesome/)
+
+And a special thank you to Michael K Pate (http://michaelkpate.com/) for having pointed out many bugs.
 
 License
 ----------------------------------------------
