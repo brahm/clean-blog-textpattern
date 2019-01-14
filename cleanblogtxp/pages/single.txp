@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="<txp:lang />">
+<txp:output_form form="clean_head" />
+
+  <body id="<txp:if_section name=""><txp:if_search>search<txp:else />home</txp:if_search><txp:else /><txp:section /></txp:if_section>-page">
+
+<txp:output_form form="clean_nav" />
+
+    <!-- Page Header -->
+    <txp:if_section>
+    <header class="masthead" style="background-image: url('<txp:site_url />assets/img/<txp:section />-bg.jpg')">
+    </txp:if_section>
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="page-heading">
+              <h1><txp:section title="1" /></h1>
+              <txp:article form="clean_excerpt" limit="1" wraptag="h2" class="subheading" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+
+          <txp:article form="clean_single" limit="1" />
+
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+<txp:output_form form="clean_footer" />
+
+<txp:output_form form="clean_js" />
+
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="<txp:lang />">
+<txp:output_form form="clean_head" />
+
+  <body id="<txp:if_section name=""><txp:if_search>search<txp:else />home</txp:if_search><txp:else /><txp:section /></txp:if_section>-page">
+
+<txp:output_form form="clean_nav" />
+
+    <!-- Page Header -->
+
+    <header class="masthead" style="background-image: url('<txp:site_url />assets/img/error-bg.jpg')">
+
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="page-heading">
+              <h1><txp:error_status /></h1>
+              <h2 class="subheading"><txp:error_message /></h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+
+          <h2>What could have caused this?</h2>
+          <p>
+            <ul class="list-unstyled">
+              <li>Well, something technical went wrong on our site.</li>
+              <li>We might have removed the page when we redesigned our website.</li>
+              <li>Or the link you clicked might be old and does not work anymore.</li>
+              <li>Or you might have accidentally typed the wrong URL in the address bar.</li>
+            </ul>
+          </p>
+          <h2>What you can do?</h2>
+          <p>
+            <ul class="list-unstyled">
+              <li>You might try retyping the URL and trying again.</li>
+              <li>Or we could take you back to the <strong><a href="<txp:site_url />"><txp:site_name /></a></strong> home page.</li>
+              <li>Or you could use the search form above to find what you are looking for.</li>
+            </ul>
+          </p>          
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+<txp:output_form form="clean_footer" />
+
+<txp:output_form form="clean_js" />
+
+  </body>
+</html>

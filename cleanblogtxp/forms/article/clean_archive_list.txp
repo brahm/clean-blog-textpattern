@@ -1,0 +1,9 @@
+<!-- show the year -->
+<txp:if_different>
+
+<h4><txp:posted format="%Y" /></h4>
+
+</txp:if_different>
+<ul class="list-unstyled">
+  <li><txp:posted format="%B, %d" /> : <txp:permlink><strong><txp:title /></strong></txp:permlink><txp:if_comments>, <a href="<txp:permlink />#comment" title="<txp:comments_invite textonly="1" showcount="0" />"><txp:comments_count /></a><txp:else /><txp:if_comments_allowed>, <a href="<txp:permlink />#comment" title="<txp:comments_invite textonly="1" showcount="0" />"><txp:comments_count /></a></txp:if_comments_allowed></txp:if_comments></li>
+</ul>

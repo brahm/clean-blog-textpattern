@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="<txp:lang />">
+<txp:output_form form="clean_head" />
+
+  <body id="<txp:if_section name=""><txp:if_search>search<txp:else />home</txp:if_search><txp:else /><txp:section /></txp:if_section>-page">
+
+<txp:output_form form="clean_nav" />
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <txp:if_section>
+    <header class="masthead" style="background-image: url('<txp:site_url />assets/img/<txp:section />-bg.jpg')">
+    </txp:if_section>
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="site-heading">
+              <h1><txp:section title="1" /></h1>
+              <h2 class="subheading">A look at the past of this blog.</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+
+
+
+          <form role="search" method="get" action="<txp:site_url />">
+          <div class="row control-group">
+              <div class="form-group col-xs-12 floating-label-form-group controls inner-addon left-addon">
+                <i class="glyphicon glyphicon-search"></i>
+                <input type="search" class="form-control" name="q" />
+              </div>
+          </div>
+          </form>
+          <br>
+
+          <txp:article_custom limit="99999" form="clean_archive_list" section="articles" />
+
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+<txp:output_form form="clean_footer" />
+
+<txp:output_form form="clean_js" />
+
+          </body>
+        </html>

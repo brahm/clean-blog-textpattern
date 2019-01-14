@@ -1,0 +1,47 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <txp:if_section name="default">
+  <meta name="description" content="<txp:site_slogan />" />
+  <title><txp:page_title separator=" - " /></title>
+  <txp:else />
+  <title><txp:page_title /></title>
+  <txp:if_individual_article>
+  <txp:if_custom_field name="Post_Description">
+  <meta name="description" content="<txp:custom_field name="Post_Description" />" />
+  </txp:if_custom_field>
+  </txp:if_individual_article>
+  <txp:meta_keywords />
+  </txp:if_section>
+  <meta name="generator" content="Textpattern CMS">
+  <txp:if_search>
+  <meta name="robots" content="none">
+  <txp:else />
+  <txp:if_category>
+  <meta name="robots" content="noindex, follow, noodp, noydir">
+  <txp:else />
+  <meta name="robots" content="index, follow, noodp, noydir">
+  </txp:if_category>
+  </txp:if_search>
+  <txp:feed_link flavor="rss" format="link" label="RSS" />
+  <txp:if_section name="">
+  <link rel="canonical" href="<txp:site_url />">
+  <txp:else />
+  <txp:if_individual_article>
+  <link rel="canonical" href="<txp:permlink />">
+  <txp:else />
+  <link rel="canonical" href="<txp:section url='1' />">
+  </txp:if_individual_article>
+  </txp:if_section>
+
+  <!-- Bootstrap Core CSS -->
+  <link href="<txp:site_url />assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom Fonts -->
+  <link href="<txp:site_url />assets/vendor/fontawesome-free/css/all.css" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <!-- Custom CSS -->
+  <link href="<txp:site_url />assets/css/clean-blog.min.css" rel="stylesheet">
+</head>

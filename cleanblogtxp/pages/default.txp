@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="<txp:lang />">
+<txp:output_form form="clean_head" />
+
+  <body id="<txp:if_section name=""><txp:if_search>search<txp:else />home</txp:if_search><txp:else /><txp:section /></txp:if_section>-page">
+
+<txp:output_form form="clean_nav" />
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+
+    <txp:if_search>
+
+    <header class="masthead" style="background-image: url('<txp:site_url />assets/img/archive-bg.jpg')">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="site-heading">
+              <h1><txp:text item="search_results" /></h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <txp:else />
+
+    <txp:if_individual_article>
+
+    <txp:if_custom_field name="Article BG">
+    <header class="masthead" style="background-image: url('<txp:custom_field name="Article BG" />')">
+    <txp:else />
+    <header class="masthead" style="background-image: url('<txp:site_url />assets/img/home-bg.jpg')">
+    </txp:if_custom_field>
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1><txp:title /></h1>
+            <h2 class="subheading"><txp:excerpt /></h2>
+            <span class="meta">Posted by <txp:author /> on <time datetime="<txp:posted />"><txp:posted /></time></span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <txp:else />
+
+    <header class="masthead" style="background-image: url('<txp:site_url />assets/img/home-bg.jpg')">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="site-heading">
+              <h1><txp:site_name /></h1>
+              <span class="subheading"><txp:site_slogan /></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    </txp:if_individual_article>
+
+    </txp:if_search>
+
+    <!-- Main Content -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+
+          <txp:if_search>
+
+          <form role="search" method="get" action="<txp:site_url />">
+          <div class="row control-group">
+              <div class="form-group col-xs-12 floating-label-form-group controls inner-addon left-addon">
+                <i class="glyphicon glyphicon-search"></i>
+                <input type="search" class="form-control" name="q" <txp:if_search> value="<txp:search_term />"</txp:if_search> />
+              </div>
+          </div>
+          </form>
+          <br>
+
+          <txp:output_form form="search_results"/>
+
+          <txp:else />
+
+          <txp:if_individual_article>
+
+          <txp:article form="default" limit="1" />
+          
+          <!-- Pager -->
+          <div class="clearfix">
+            <txp:variable name="prev" value='<txp:link_to_prev />' />
+            <txp:variable name="next" value='<txp:link_to_next />' />
+            <txp:if_variable name="prev" value="">
+            <txp:else />
+            <a class="btn btn-primary float-left" href="<txp:link_to_prev />" title="<txp:prev_title />">&Larr; Older Posts</a>
+            </txp:if_variable>
+            <txp:if_variable name="next" value="">
+            <txp:else />
+            <a class="btn btn-primary float-right" href="<txp:link_to_next />" title="<txp:next_title />">Newer Posts &rarr;</a>
+            </txp:if_variable>
+          </div>
+
+          <txp:else />
+
+          <txp:article form="clean_article_list" limit="5" />
+          
+          <!-- Pager -->  
+          <div class="clearfix">
+            <txp:variable name="next" value='<txp:newer />' />
+            <txp:variable name="prev" value='<txp:older />' />
+            <txp:if_variable name="prev" value="">
+            <txp:else />      
+            <a class="btn btn-primary float-left" href="<txp:older />">&Larr; Older Posts</a>
+            </txp:if_variable>
+            <txp:if_variable name="next" value="">
+            <txp:else />
+            <a class="btn btn-primary float-right" href="<txp:newer />">Newer Posts &rarr;</a>
+            </txp:if_variable>
+          </div>
+
+          </txp:if_individual_article>
+
+          </txp:if_search>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+<txp:output_form form="clean_footer" />
+
+<txp:output_form form="clean_js" />
+
+  </body>
+</html>

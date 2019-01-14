@@ -1,0 +1,6 @@
+<!-- Bootstrap core JavaScript -->
+<script src="<txp:site_url />assets/vendor/jquery/jquery.min.js"></script>
+<script src="<txp:site_url />assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom scripts for this template -->
+<script src="<txp:site_url />assets/js/clean-blog.min.js"></script>
