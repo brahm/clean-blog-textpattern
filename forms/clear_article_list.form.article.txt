@@ -1,8 +1,0 @@
-<div class="post-preview" role="article" itemscope itemtype="http://schema.org/Article">
-    <a href="<txp:permlink />" itemprop="url">
-        <h2 itemprop="name" class="post-title"><txp:title /></h2>
-        <txp:if_excerpt><h3 class="post-subtitle" itemprop="description"><txp:excerpt /></h3></txp:if_excerpt>
-    </a>
-    <p class="post-meta">Posted by <txp:author /> on <time datetime="<txp:posted />"><txp:posted /></time></p>
-</div>
-<hr>

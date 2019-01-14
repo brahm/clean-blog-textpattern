@@ -1,6 +1,0 @@
-<txp:body />
-<hr>
-<txp:if_individual_article>
-  <txp:article form="comments_display" />
-</txp:if_individual_article>
-<hr>
