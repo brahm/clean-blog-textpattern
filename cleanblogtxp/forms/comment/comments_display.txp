@@ -44,7 +44,7 @@
     <section id="comments-form">
 
       <h2><txp:comments_invite showcount="0" textonly="1" showalways="1" /></h2>
-      <txp:comments_form isize="32" msgcols="45" msgrows="8" />
+      <txp:comments_form />
     </section>
 
     <txp:else />

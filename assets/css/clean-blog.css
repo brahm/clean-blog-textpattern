@@ -2,6 +2,8 @@
  * Start Bootstrap - Clean Blog v5.0.1 (https://startbootstrap.com/template-overviews/clean-blog)
  * Copyright 2013-2018 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-clean-blog/blob/master/LICENSE)
+ *
+ * Ported to Bootstrap 5.3.
  */
 
 body {
@@ -373,6 +375,30 @@ form .row:first-child .floating-label-form-group {
   border-top: 1px solid #ffffff;
 }
 
+/* Icon inside the search field. Bootstrap 5 has no Glyphicons, so the markup
+   uses Font Awesome and the positioning is handled here. */
+.inner-addon {
+  position: relative;
+}
+
+.inner-addon .fas {
+  position: absolute;
+  z-index: 2;
+  top: calc(50% - 0.25em);
+  font-size: 1.25em;
+  color: #868e96;
+  pointer-events: none;
+  transform: translateY(-50%);
+}
+
+.left-addon .fas {
+  left: 0;
+}
+
+.floating-label-form-group.left-addon .form-control {
+  padding-left: 1.2em;
+}
+
 footer {
   padding: 50px 0 65px;
 }
@@ -403,14 +429,19 @@ footer .copyright {
 }
 
 .btn-primary {
-  background-color: #0085A1;
-  border-color: #0085A1;
-}
-
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
-  color: #fff;
-  background-color: #00657b !important;
-  border-color: #00657b !important;
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #0085A1;
+  --bs-btn-border-color: #0085A1;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #00657b;
+  --bs-btn-hover-border-color: #00657b;
+  --bs-btn-focus-shadow-rgb: 0, 133, 161;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #00657b;
+  --bs-btn-active-border-color: #00657b;
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #0085A1;
+  --bs-btn-disabled-border-color: #0085A1;
 }
 
 .btn-lg {

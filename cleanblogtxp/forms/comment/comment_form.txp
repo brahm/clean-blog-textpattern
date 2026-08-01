@@ -12,19 +12,19 @@
     <p class="comment-notes"><txp:text item="enter_comment_here" /></p>
     <p class="comment-form-comment">
       <label for="comment"><txp:text item="comment_message" /><span class="required">*</span></label>
-      <txp:comment_message_input />
+      <txp:comment_message_input rows="8" cols="45" />
     </p>
     <p class="comment-form-author">
       <label for="author"><txp:text item="comment_name" /><span class="required">*</span></label>
-      <txp:comment_name_input />
+      <txp:comment_name_input size="32" />
     </p>
     <p class="comment-form-email">
       <label for="email"><txp:text item="comment_email" /><span class="required">*</span></label>
-      <txp:comment_email_input />
+      <txp:comment_email_input size="32" />
     </p>
     <p class="comment-form-url">
       <label for="url"><txp:text item="comment_web" /></label>
-      <txp:comment_web_input />
+      <txp:comment_web_input size="32" />
     </p>
     <p><div class="checkbox"><txp:comment_remember /></div></p>
     <p class="form-submit">

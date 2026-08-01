@@ -33,8 +33,8 @@
 
           <form role="search" method="get" action="<txp:site_url />">
           <div class="row control-group">
-              <div class="form-group col-xs-12 floating-label-form-group controls inner-addon left-addon">
-                <i class="glyphicon glyphicon-search"></i>
+              <div class="col-12 floating-label-form-group controls inner-addon left-addon">
+                <i class="fas fa-search"></i>
                 <input type="search" class="form-control" name="q" />
               </div>
           </div>
